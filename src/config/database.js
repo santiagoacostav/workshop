@@ -8,9 +8,10 @@ const pool = createPool({
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASS || "",
     database: process.env.DB_DATABASE || "workshop2023",
-    waitForConnections: true,
+//    waitForConnections: true,
     connectionLimit: 3,
-    queueLimit: 0,
+  //  queueLimit: 0,
+    enableKeepAlive: true,
     port: process.env.DB_PORT || 3306
 });
 
