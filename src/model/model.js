@@ -10,7 +10,7 @@ export const getAllUsuariosFromDB = async () => {
         console.error('Error querying MySQL:', error);
         throw error;
     } finally {
-        pool.releaseConnection();
+        pool.release();
     }
 
 };
@@ -24,7 +24,7 @@ export const getUsuarioPorIDFromDB = async (id) => {
         console.error('Error querying MySQL:', error);
         throw error;
     } finally {
-        pool.releaseConnection();
+        pool.release();
     }
 };
 
@@ -39,7 +39,7 @@ export const addUsuarioFromDB = async (usuarioData) => {
         console.error('Error inserting into MySQL:', error);
         throw error;
     } finally {
-        pool.releaseConnection();
+        pool.release();
     }
     
 };
@@ -54,7 +54,7 @@ export const editUsuarioFromDB = async (id, updatedUsuarioData) => {
         console.error('Error updating MySQL:', error);
         throw error;
     } finally {
-        pool.releaseConnection();
+       pool.release();
     }
 };
 
@@ -68,7 +68,7 @@ export const deleteUsuarioFromDB = async (id) => {
         console.error('Error deleting from MySQL:', error);
         throw error;
     } finally {
-        pool.releaseConnection();
+        pool.release();
     }
 };
 
