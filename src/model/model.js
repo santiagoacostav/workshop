@@ -12,7 +12,7 @@ export const getAllUsuariosFromDB = async () => {
         throw error;
     } finally {
         connection.release();
-        console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
+      //  console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
 
     }
 
@@ -29,7 +29,7 @@ export const getUsuarioPorIDFromDB = async (id) => {
         throw error;
     } finally {
         connection.release();
-        console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
+       // console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
 
     }
 };
@@ -47,7 +47,7 @@ export const addUsuarioFromDB = async (usuarioData) => {
         throw error;
     } finally {
         connection.release();
-        console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
+      //  console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
 
     }
     
@@ -65,7 +65,7 @@ export const editUsuarioFromDB = async (id, updatedUsuarioData) => {
         throw error;
     } finally {
        connection.release();
-        console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
+       // console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
 
     }
 };
@@ -82,7 +82,7 @@ export const deleteUsuarioFromDB = async (id) => {
         throw error;
     } finally {
         connection.release();
-        console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
+       // console.log(`Número de conexiones activas: ${connection.activeConnections()}`);
 
     }
 };
