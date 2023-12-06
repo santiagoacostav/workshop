@@ -12,6 +12,8 @@ export const getAllUsuariosFromDB = async () => {
         throw error;
     } finally {
         connection.release();
+        console.log(`Número de conexiones activas: ${pool.activeConnections()}`);
+
     }
 
 };
@@ -27,6 +29,8 @@ export const getUsuarioPorIDFromDB = async (id) => {
         throw error;
     } finally {
         connection.release();
+        console.log(`Número de conexiones activas: ${pool.activeConnections()}`);
+
     }
 };
 
@@ -43,6 +47,8 @@ export const addUsuarioFromDB = async (usuarioData) => {
         throw error;
     } finally {
         connection.release();
+        console.log(`Número de conexiones activas: ${pool.activeConnections()}`);
+
     }
     
 };
@@ -59,6 +65,8 @@ export const editUsuarioFromDB = async (id, updatedUsuarioData) => {
         throw error;
     } finally {
        connection.release();
+        console.log(`Número de conexiones activas: ${pool.activeConnections()}`);
+
     }
 };
 
@@ -74,6 +82,8 @@ export const deleteUsuarioFromDB = async (id) => {
         throw error;
     } finally {
         connection.release();
+        console.log(`Número de conexiones activas: ${pool.activeConnections()}`);
+
     }
 };
 
