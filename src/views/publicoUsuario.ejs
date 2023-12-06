@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+    
+
+    <div class="container">
+        <h1>
+            <%= data.nombre %> (<%= data.edad %>)
+        </h1>
+        <div class="row">
+            <div class="col-6">
+                <img src="<%= data.imagen %>" alt="">
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>
+                        <%= data.email %>
+                    </li>
+                    <li>
+                        <%= data.telefono %>
+                    </li>
+                    <li>
+                        <%= data.ciudad %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("partials/footer") %>
+</body>
+
+</html>

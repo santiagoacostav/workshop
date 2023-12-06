@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+        <div class="container">
+            <h1>Admin - Actualizar (<%= data.nombre %>)</h1>
+
+            <form action="/admin/editar/<%= data.id %>" method="post">
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Nombre
+                    </label>
+                    <input type="text" name="nombre" class="form-control" value="<%= data.nombre %>" required>
+                </div>
+
+
+
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        E-mail
+                    </label>
+                    <input type="text" name="email" class="form-control" value="<%= data.email %>" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Teléfono
+                    </label>
+                    <input type="tel" name="telefono" class="form-control" value="<%= data.telefono %>" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Edad
+                    </label>
+                    <input type="number" name="edad" class="form-control" value="<%= data.edad %>" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Ciudad
+                    </label>
+                    <input type="text" name="ciudad" class="form-control" value="<%= data.ciudad %>" required>
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="" class="form-label">
+                            URL imagen
+                        </label>
+                        <input type="text" name="imagen" class="form-control" value="<%= data.imagen %>" required>
+                    </div>
+                    <div class="col-6">
+                        <img src="<%= data.imagen %>" alt="<%= data.imagen %>" srcset="" width="100">
+                    </div>
+
+
+                </div>
+
+                <input type="submit" value="Editar" class="btn btn-outline-primary">
+
+
+            </form>
+        </div>
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>

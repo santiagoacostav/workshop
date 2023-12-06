@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+
+        <div class="container">
+            <h1>
+                <%= titulo %>
+            </h1>
+
+            <form action="/admin/crear/" method="post">
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Nombre
+                    </label>
+                    <input type="text" name="nombre" class="form-control" required>
+                </div>
+
+
+
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        E-mail
+                    </label>
+                    <input type="text" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Teléfono
+                    </label>
+                    <input type="tel" name="telefono" class="form-control" required placeholder="Ej: +54 9 00 0000 0000">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Edad
+                    </label>
+                    <input type="number" name="edad" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        Ciudad
+                    </label>
+                    <input type="text" name="ciudad" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">
+                        URL imagen
+                    </label>
+                    <input type="text" name="imagen" class="form-control" required placeholder="/avatar/imagen.jpg">
+                </div>
+
+                <input type="submit" value="Crear" class="btn btn-outline-primary">
+
+
+            </form>
+        </div>
+
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>

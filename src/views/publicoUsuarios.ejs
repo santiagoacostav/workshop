@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head") %>
+</head>
+
+<body>
+    <%- include("partials/navbar") %>
+        <div class="container">
+            <h1>Usuarios</h1>
+
+
+            <div class="row">
+                <% data.forEach(usuario=> { %>
+
+
+                    <div class="col-3 my-2">
+                        <div class="card">
+                            <img src="<%= usuario.imagen %>" class="card-img-top" alt=<%=usuario.nombre %>>
+                            <div class="card-body">
+                                <h2 class="card-title h5">
+                                    <%= usuario.nombre %> (<%= usuario.edad %>)
+                                </h2>
+                                <ul>
+                                    <li>
+                                        <%= usuario.email %>
+                                    </li>
+                                    <li>
+                                        <%= usuario.telefono %>
+                                    </li>
+                                    <li>
+                                        <%= usuario.ciudad %>
+                                    </li>
+                                </ul>
+                                <a href="/usuarios/<%= usuario.id %>" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+
+
+        <%- include("partials/footer") %>
+</body>
+
+</html>
